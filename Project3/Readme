@@ -1,0 +1,138 @@
+
+
+
+Name:- Kalpkumar Shah ----------------------------------------------
+
+Please confirm that you compiled your solution with test cases exercising ALL
+functions using g++ -std=c++11.  Confirm this statement by typing YES below.
+(If you did not do this, compilation errors may result in an overall grade of
+zero!)
+
+YES
+
+
+
+
+Describe what augmentations to the bst data structures you made to complete the 
+project -- i.e., what types / data members did you change and why?
+
+
+I added the new data member of the bst class as size1 which keeps track of the whole bst
+I added two integer variables data members in my struct which keeps the track of nodes in left subtree
+	and right subtree
+I added one more data member in my struct which is a bst node pointer called parent for the function
+	balancing of.
+
+
+
+
+-----------------------------------------------
+Which functions did you need to modify as a result of the augmentations from the previous
+question?  
+
+
+For balancing of I changed the insert function and remove function
+For size I changed the size function with it's runtime changing to O(1)
+
+
+
+
+
+
+-----------------------------------------------
+For each function from the previous question, how did you ensure that the (asymptotic) runtime 
+remained the same?
+
+For the remove and the insert function I just check for the violating data and kept the other's same by doing
+	it with O(h) runtime.
+For size I changed the runtime to O(1).
+
+
+
+
+
+-----------------------------------------------
+For each of the assigned functions, tell us how far you got using the choices 0-5 and
+answer the given questions.  
+
+
+0:  didn't get started
+1:  started, but far from working
+2:  have implementation but only works for simple cases
+3:  finished and I think it works most of the time but not sure the runtime req is met. 
+4:  finished and I think it works most of the time and I'm sure my design leads to 
+       the correct runtime (even if I still have a few bugs).
+5:  finished and confident on correctness and runtime requirements
+
+
+to_vector level of completion:  _____5______  
+
+
+-----------------------------------------------
+get_ith level of completion:  _____5______  
+
+    How did you ensure O(h) runtime?
+
+    ANSWER: Through recursive I check that if my count is less than the nodes in left then
+		I just go left instead of finding in the whole tree itreatively through loop
+		so the runtime is O(h). the same way I do for the right side and when I found the 
+		value I just return.
+
+-----------------------------------------------
+position_of level of completion:  _____5______  
+
+    How did you ensure O(h) runtime?
+
+    ANSWER: So here I loop until I find a nullptr. I check that if my val is same as given then 
+		I return the pos of that else if my val is less then I check on my right else left
+		returns -1 if not found in the tree. Hence the runtime goes for O(h).
+
+-----------------------------------------------
+num_geq level of completion:  _____5______  
+
+    How did you ensure O(h) runtime?
+
+    ANSWER: The way I do the postion of I do the same kind of thing in here but when the current value
+		is less than given then I go left instead of right else I go right. Hence the runtime
+		goes for O(h).
+
+-----------------------------------------------
+num_leq level of completion:  _____5_______
+
+    How did you ensure O(h) runtime?
+
+    ANSWER: It's the same thing as postion of but here I return the numNodes instead of pos. Hence the runtime
+		is same O(h).
+
+-----------------------------------------------
+num_range level of completion:  _____5_______
+
+    How did you ensure O(h) runtime?
+
+    ANSWER: Here I take help of num_leq and num_geq to get the range of the minimum and maximum and finds for a 
+		node min and max to add the count and retrun the total size - num_leq - num_geq + count.
+		Here the num_leq and num_geq both are O(h). Hence results in O(h).
+
+-----------------------------------------------
+extract_range level of completion:  _____5_______
+
+    How did you ensure O(h+k) runtime?
+
+    ANSWER: Here I start with declaring the vector pointer and call a helper function. This function goes
+		recursively to ensure the range and hence O(h+k) for the helper. 
+
+Implementation of size-balanced criteria according to 
+the given guidelines:
+
+    Level of completion: _____3______
+
+
+
+
+
+
+
+
+
+
+
